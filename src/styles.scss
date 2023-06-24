@@ -1,0 +1,143 @@
+$font-stack: 'Poppins', sans-serif;
+$primary-color: #000000;
+$hover-color: #cf649a;
+$font-big: 18px;
+$font-small: 14px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: #f8f9fa;
+    font-family: $font-stack;
+    color: $primary-color
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container__text {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+
+    .container__we-are{
+        max-width: 354px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        font-size: $font-big;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: $font-small;
+    }
+
+    @media (min-width: 530px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.container__cards{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .container__card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 190px;
+        margin-right: 40px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.05);
+            color: $hover-color;
+        }
+
+        img {
+            width: 190px;
+
+        }
+
+        figcaption {
+            font-size: $font-small;
+            font-weight: bold;
+        }
+
+        span {
+            position: absolute;
+            top: 2%; 
+            left: 112%;
+            transform: rotate(90deg);
+            transform-origin: left top;
+            white-space: nowrap;
+            font-size: $font-small;
+        }
+        @media (max-width: 500px){
+            width: 250px;
+            margin-top: 40px;
+            img {
+                width: 250px;    
+            }
+        }
+    }
+
+    @media (max-width: 500px){
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    @media (min-width: 500px) and (max-width: 729px){
+        .container--second-layout{
+            margin-top: 75px;
+        }
+        .container--second-job{
+            span{
+                top: 12%;
+            }
+        }
+    }
+
+    @media (min-width: 730px){
+        .container--third-layout{
+            margin-top: 75px;
+        }
+        .container--third-job{
+            span{
+                top: 12%;
+            }
+        }
+    }
+
+}
+
+.attribution{
+    color: #333;
+    text-align: center;
+    font-size: 10px;
+    a{
+        text-decoration: none;
+        color: inherit;
+        &:hover{
+            color: $hover-color;
+        }
+    }  
+}
+
+
+
