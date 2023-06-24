@@ -89,3 +89,5 @@ I didn't see the opportunity to use Modules or Mixins. I hope to be able to impl
 
 Daniel Hincapié Vargas
 
+-[proyecto en github pages](https://danielhincapievargas.github.io/my-team-page/)
+
